@@ -1,0 +1,18 @@
+.loadMoreDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.loadMoreButton {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(151, 163, 250);
+  color: black;
+  font-size: 15px;
+}
+.loadMoreButton:hover {
+  background-color: rgb(117, 117, 251);
+  color: white;
+}
