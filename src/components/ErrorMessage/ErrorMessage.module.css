@@ -1,0 +1,8 @@
+.errorDiv {
+  display: flex;
+  justify-content: center;
+}
+.errorMessage {
+  font-size: 20px;
+  font-weight: 700;
+}
