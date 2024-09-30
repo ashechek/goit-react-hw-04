@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------------- imports
-import LoadMoreButton from "./components/LoadMoreButton/LoadMoreButton.jsx";
+import LoadMoreBtn from "./components/LoadMoreBtn/LoadMoreBtn.jsx";
 import ImageModal from "./components/ImageModal/ImageModal.jsx";
 import Modal from "react-modal";
 import searchImagesForTopic from "./search-img-api.js";
@@ -43,15 +43,15 @@ const App = () => {
   };
   const loadMoreFu = async () => {
     try {
-      setLoader(true);
+      setIsLoader(true);
       const nextPage = page + 1;
       const data = await searchImagesForTopic(topic, nextPage);
       setPage(nextPage);
       setServerData((prev) => [...prev, ...data]);
     } catch {
-      setError(true);
+      setIsError(true);
     } finally {
-      setLoader(false);
+      setIsLoader(false);
     }
   };
   return (
@@ -62,7 +62,7 @@ const App = () => {
         <ImageGallery galleryList={serverData} openModalFu={openModal} />
       )}
       {serverData.length > 0 && !loader && (
-        <LoadMoreButton loadMoreFu={loadMoreFu} />
+        <LoadMoreBtn loadMoreFu={loadMoreFu} />
       )}
       {error && <ErrorMessage />}
       {loader && <Loader />}

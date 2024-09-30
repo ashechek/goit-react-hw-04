@@ -4,7 +4,7 @@
   margin-top: 20px;
 }
 
-.loadMoreButton {
+.loadMoreBtn {
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
@@ -14,7 +14,7 @@
   font-size: 15px;
 }
 
-.loadMoreButton:hover {
+.loadMoreBtn:hover {
   background-color: rgb(255, 238, 0);
   color: rgb(0, 26, 255);
 }
